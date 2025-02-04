@@ -3,6 +3,9 @@ import './App.scss';
 import Login from './components/Login';
 import FirstComp from './components/FirstComp';
 import { useState, useEffect } from 'react';
+import SampleArray from './SampleArray';
+import Get from './components/Get';
+import Form from './components/Form';
 function App() {
   // const [city,setCity]=useState("Hyderabad");
   // useEffect((city)=>{
@@ -13,7 +16,9 @@ function App() {
   //     setCity("goa");
   //   }
   // },[])
-
+  const apple={
+    name:"swaroop",
+  }
   const [showComponent,hideComponent]=useState(false)
   const [number,setNumber]=useState(0);
   const increament=()=>{
@@ -29,13 +34,16 @@ function App() {
   }
   return (
     <div className="App">
-      <div className='textcenter'>
-        {showComponent?<Login/>:<FirstComp />}  
+      {/* <div className='textcenter'>
+        {showComponent?<Login name={apple}/>:<FirstComp />}  
       </div> 
       <button onClick={increament} >Increament</button>
       <button onClick={decreament}>Decrement</button>
       <button onClick={reset}>reset</button>
       {number}
+      <SampleArray />
+      <Get /> */}
+      <Form />
     </div>
   );
 }
